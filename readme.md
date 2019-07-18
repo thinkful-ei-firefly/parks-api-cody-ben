@@ -1,3 +1,3 @@
-An api that displays 
--parks by state
--with each parks name, description, website
+An api that displays\n
+-parks by state\n
+-with each parks name, description, website\n

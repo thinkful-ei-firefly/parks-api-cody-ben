@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>Parks</title>
+</head>
+
+<body>
+  <h1>Park Info</h1>
+
+  <form>
+    <label for="states">Enter state code(s)</label>
+    <input type="text" name="states" id="states">
+    <!-- <select id="states"></select> -->
+    <label for="max-results">Max Results</label>
+    <input type="number" name="max-results" id="max-results" min="1" value="10">
+    <input type="submit" value="Submit" class="submit-btn">
+
+  </form>
+
+  <section>
+    <h2>Parks</h2>
+    <ul class="js-parks-list"></ul>
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
