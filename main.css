@@ -1,5 +1,5 @@
 /* Ben */
-/* * {
+* {
   box-sizing: border-box;
 }
 
@@ -10,14 +10,11 @@ body {
   margin: 0 auto;
 }
 
-.js-parks-list {
-  text-align: left;
+input[type=submit]:hover {
+  cursor: pointer;
 }
 
-input[type=submit]:hover {
-  cursor: pointer; */
-
-header{
+header {
   display: flex;
   justify-content: center;
   border: 1px double black;
