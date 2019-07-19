@@ -6,20 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
   <link rel="stylesheet" href="main.css">
   <title>National Parks</title>
 </head>
 
 <body>
-  <h1>Park Info</h1>
+
+  <header>
+    <h1>Park Info</h1>
+  </header>
 
   <form>
-    <label for="states">Enter state code(s)</label>
+    <label for="states">Enter state code(s) separated by ","'s</label>
     <input type="text" name="states" id="states">
     <label for="max-results">Max Results</label>
     <input type="number" name="max-results" id="max-results" min="1" value="10">
     <input type="submit" value="Submit" class="submit-btn">
-
   </form>
 
   <section aria-live="polite">
