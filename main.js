@@ -39,10 +39,7 @@ function renderParks(jsonData) {
       <h3>${park.name}</h3>
       <p>${park.description}</p>
       <p>Address:<br>
-      ${park.addresses[0].line1},
-      ${park.addresses[0].city},
-      ${park.addresses[0].stateCode}
-      ${park.addresses[0].postalCode}      
+      ${park.addresses.length > 0 ? renderAddress(park.addresses): 'No Address Available'}     
       </p>
       <p>Website: <a href="${park.url}">${park.name}</a></p>
     </li>`);
@@ -53,6 +50,11 @@ function renderParks(jsonData) {
 function formatStateInput(states) {
   states = states.split(' ').join('');
   return states;
+}
+
+//park.addresses[0].line1, park.addresses[0].city, park.addresses[0].stateCode, park.addresses[0].stateCode, 
+function renderAddress(addresses){
+  return `${addresses[0].line1}, ${addresses[0].city}, ${addresses[0].stateCode} ${addresses[0].postalCode}`;
 }
 
 function main() {
