@@ -1,4 +1,5 @@
 'use strict';
+/* global $ */
 
 const apiKey = 'oVT5VFKe6mMGdcanleNpicgZcMl1QpKGSedNTHN1';
 
@@ -7,7 +8,6 @@ const baseUrl = 'https://developer.nps.gov/api/v1/parks?stateCode=';
 // get request
 function getParks(states, maxResults=10){
   const url = baseUrl + states + '&fields=addresses' + '&api_key=' + apiKey + '&limit=' + maxResults;
-  console.log(url);
   fetch(url)
     .then(response => {
       if(response.ok){
@@ -17,7 +17,7 @@ function getParks(states, maxResults=10){
     })
     //.then(responseJson => console.log(responseJson))
     .then(responseJson => renderParks(responseJson, states))
-    .catch(err => console.log(err));
+    .catch(err => alert(err));
 }
 
 // listener
@@ -39,8 +39,7 @@ function handleSubmit() {
 // }
 
 // render some parks
-function renderParks(jsonData, states){
-  console.log(jsonData);
+function renderParks(jsonData){
   const parkData = jsonData.data;
   $('.js-parks-list').empty();
   parkData.forEach(park => {
@@ -48,7 +47,6 @@ function renderParks(jsonData, states){
       <h3>${park.name}<h3>
       <p>${park.description}</p>
       <p>Address:
-        
         ${park.addresses[0].line1},
         ${park.addresses[0].city},
         ${park.addresses[0].stateCode}
@@ -69,7 +67,6 @@ function renderParks(jsonData, states){
 // }
 
 function main(){
-  //renderStates();
   handleSubmit();
 }
 

@@ -1,3 +1,2 @@
-An api that displays  
--parks by state   
--with each parks name, description, website   
+# National Parks API (Cody & Ben)
+This app allows a user to specify state(s) and the number of results to display, and shows the name, description, website, and address of the parks found according to the query.
